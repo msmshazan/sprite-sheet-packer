@@ -75,6 +75,7 @@ jobs:
         mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
         cp install/linux/SpriteSheetPacker.desktop AppDir/usr/share/applications/
         cp SpriteSheetPacker/res/icon.png AppDir/usr/share/icons/hicolor/256x256/apps/SpriteSheetPacker.png
+        cp -r SpriteSheetPacker/defaultFormats AppDir/usr/bin/
 
     - name: Build
       run: |
