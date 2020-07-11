@@ -142,7 +142,7 @@ CONFIG(release,debug|release) {
     linux {
         DEPLOY_COMMAND = linuxdeployqt
         DEPLOY_TARGET = ../AppDir/usr/share/applications/$${TARGET}.desktop
-        DEPLOY_OPTIONS = -appimage
+        DEPLOY_OPTIONS = "-appimage -extra-plugins=platforms/libqoffscreen.so,platforms/libqminimal.so,platforms/libqlinuxfb.so"
     }
 
     QMAKE_POST_LINK = $${DEPLOY_COMMAND} $${DEPLOY_TARGET} $${DEPLOY_OPTIONS}

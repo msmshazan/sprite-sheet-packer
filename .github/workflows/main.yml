@@ -2,9 +2,8 @@ name: SpritesheetPacker
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - '*'
 
 jobs:
   macos:
