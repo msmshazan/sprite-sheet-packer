@@ -24,17 +24,14 @@ jobs:
         uses: jurplel/install-qt-action@v2
         with:
           cached: ${{ steps.cache-qt.outputs.cache-hit }}
-      - name: Run QMake
+      - name: Run QMake and Build
         run: | 
             pushd %cd%
             call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64 
             popd
             qmake sprite-sheet-packer.pro
+            nmake
         shell: cmd
-      - name: Build
-        run: |
-          nmake
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
