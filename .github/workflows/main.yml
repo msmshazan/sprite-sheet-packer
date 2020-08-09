@@ -1,5 +1,6 @@
 name: SpritesheetPacker
-
+env:
+  IS_PIPELINE: 'true'
 on:
   push:
     branches: [ master ]
