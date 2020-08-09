@@ -30,6 +30,7 @@ jobs:
             call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %x64 
             popd
             qmake sprite-sheet-packer.pro
+        shell: cmd
       - name: Build
         run: |
           make -j8
