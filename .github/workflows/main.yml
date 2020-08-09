@@ -25,9 +25,9 @@ jobs:
         with:
           cached: ${{ steps.cache-qt.outputs.cache-hit }}
       - name: Run QMake
-        run: qmake sprite-sheet-packer.pro
-      - name: Setup shell
-        run: call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %x64 
+        run: | 
+            call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %x64 
+            qmake sprite-sheet-packer.pro
       - name: Build
         run: |
           make -j8
