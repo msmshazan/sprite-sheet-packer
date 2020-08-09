@@ -37,7 +37,4 @@ jobs:
         with:
           name: SpriteSheetPacker-windows
           path: |
-            ./*.exe
-            ./**/*.exe
-            ./*.dll
-            ./**/*.dll
+            ./install/win/bin/*
