@@ -33,7 +33,7 @@ jobs:
         shell: cmd
       - name: Build
         run: |
-          make -j8
+          nmake
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
