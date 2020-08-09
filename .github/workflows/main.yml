@@ -39,3 +39,5 @@ jobs:
           path: |
             ./*.exe
             ./**/*.exe
+            ./*.dll
+            ./**/*.dll
