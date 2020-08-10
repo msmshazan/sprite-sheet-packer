@@ -10,7 +10,7 @@ function exportSpriteSheet(dataFilePath, imageFilePath, spriteFrames) {
         cocosFrame["sourceSize"] = spriteFrame.sourceSize;
         cocosFrame["rotated"] = spriteFrame.rotated;
         if(spriteFrame.triangles)
-		{
+	    {
 			cocosFrame["triangles"] = spriteFrame.triangles; 
         }
 
